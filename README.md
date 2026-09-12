@@ -29,15 +29,18 @@
 
 ## 文件结构
 
-| 文件/目录 | 说明 |
-|---|---|
-| synopsis.md | 故事大纲与主线剧情 |
-| characters.md | 角色设定（性格、背景、关系） |
-| worldbuilding.md | 世界观设定（地理、历史、时代背景） |
-| style-guide.md | 文风指南（叙事视角、用语规范） |
-| progress.md | 写作进度追踪 |
-| chapters/ | 小说章节内容目录 |
-| notes/ | 项目笔记与参考资料 |
+```
+奉天1928/
+├── README.md              ← 项目介绍与参与方式
+├── SYNOPSIS.md            ← 本文件，剧情总纲
+├── LICENSE                ← CC BY-NC-SA 4.0 协议
+├── CONTRIBUTING.md        ← 写作协作规范
+├── CODE_OF_CONDUCT.md     ← 行为准则
+├── .gitignore             ← Git忽略规则
+├── chapters/              ← 正文章节（按卷/篇组织）
+├── characters/            ← 角色设定
+└── worldbuilding/         ← 世界观设定
+```
 
 ## 参与方式
 
