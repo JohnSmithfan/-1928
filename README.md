@@ -32,11 +32,12 @@
 ```
 奉天1928/
 ├── README.md              ← 项目介绍与参与方式
-├── SYNOPSIS.md            ← 本文件，剧情总纲
+├── SYNOPSIS.md            ← 剧情总纲
 ├── LICENSE                ← CC BY-NC-SA 4.0 协议
 ├── CONTRIBUTING.md        ← 写作协作规范
 ├── CODE_OF_CONDUCT.md     ← 行为准则
 ├── .gitignore             ← Git忽略规则
+├── STYLE-GUIDE.md         ← 写作风格
 ├── chapters/              ← 正文章节（按卷/篇组织）
 ├── characters/            ← 角色设定
 └── worldbuilding/         ← 世界观设定
