@@ -1,0 +1,78 @@
+# ============================================
+# 奉天1928 - 小说项目 .gitignore
+# ============================================
+
+# --- 编辑器临时文件和备份 ---
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.swx
+*.log
+
+# --- Vim 交换文件 ---
+.*.swp
+*#*
+*.un~
+
+# --- VS Code / VS Code Insiders ---
+.vscode/
+*.code-workspace
+.vscode-insiders/
+
+# --- PyCharm / IntelliJ (如果用了IDE写文档) ---
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# --- macOS 系统文件 ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Windows 系统文件 ---
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs_vista.db
+ehthumbs_vista.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# --- 写作软件自动生成文件 ---
+*.scrivx
+*.ufo
+*.autosave
+Scratch/
+Snapshots/
+*.manuskript
+
+# --- 个人笔记（不纳入版本控制） ---
+notes-personal/
+drafts-private/
+
+# --- 大型媒体文件（如有配图） ---
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+*.mp3
+*.mp4
+*.avi
+
+# --- 压缩包 ---
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# --- 日志文件 ---
+*.log
