@@ -30,4 +30,5 @@
 
 ---
 
+> **文档权威层级**：本目录（含 `OUTLINE/`）为世界观与分卷大纲的**定稿权威源**；`notes-personal/世界观草稿.md`、`notes-personal/大纲草稿.md` 仅为工作草稿（工作源）。冲突以本目录为准，修改定稿后同步草稿（见 CONTRIBUTING.md §9）。
 > 新增设定请先在此 README 中登记，再创建或更新对应设定文件。如有冲突，以 SYNOPSIS.md 总纲为准。

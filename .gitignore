@@ -7,6 +7,7 @@
 *.swo
 *~
 *.bak
+*.bak*
 *.tmp
 *.swx
 *.log
