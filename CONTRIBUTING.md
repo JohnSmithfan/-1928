@@ -194,8 +194,7 @@ GitHub Novel Serialization Skill/
 
 **管理与进度**
 
-- [PLAN.md](PLAN.md) — 项目总体规划与阶段任务
-- [progress.md](progress.md) — 卷/幕/章进度与实测统计
+- [progress.md](progress.md) — 卷/幕/章进度与实测统计；**项目唯一的进度与规划文档**（原 `PLAN.md` 总体规划已并入其「附一：总体规划」并按实况校正，`PLAN.md` 已于 2026-09-29 删除）
 - [CHANGELOG.md](CHANGELOG.md) — 变更日志（含备份治理与报告归档记录）
 - [issues/README.md](issues/README.md) — 卷幕剧情讨论 Issue 索引（#1—#23）
 - [.workbuddy/reports/README.md](.workbuddy/reports/README.md) — 审查 / 审核报告归档索引（见 §11）

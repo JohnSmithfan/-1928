@@ -39,8 +39,7 @@
 ├── CODE_OF_CONDUCT.md     ← 行为准则
 ├── .gitignore             ← Git忽略规则
 ├── STYLE-GUIDE.md         ← 写作风格
-├── PLAN.md                ← 项目总体规划（阶段/里程碑）
-├── progress.md            ← 写作进度追踪
+├── progress.md            ← 进度与规划（唯一；含「附一：总体规划」，原 PLAN.md 已并入并删除）
 ├── chapters/              ← 正文唯一存放目录（卷/幕/单章：`第NNN章 四字标题.md`）
 ├── characters/            ← 角色设定
 ├── worldbuilding/         ← 世界观设定（含 OUTLINE/ 五卷大纲，分卷权威源）
