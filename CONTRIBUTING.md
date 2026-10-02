@@ -8,7 +8,7 @@
 
 ### 1. 认领章节
 
-- 查看 `issues/README.md` 索引的**卷幕讨论 Issue**（5 卷 23 幕，#1—#23），寻找标注为 “open” 的章节认领任务（`gh` 令牌有效时同步至 GitHub Issues）
+- 查看 `.workbuddy/reports/README.md` 索引的**卷幕讨论 Issue**（5 卷 23 幕，#1—#23），寻找标注为 “open” 的章节认领任务（`gh` 令牌有效时同步至 GitHub Issues）
 - 也可以在对应 Issue 中留言表示想写某个章节，项目维护者会进行分配
 - 认领后请在 Issue 下回复确认，避免多人同时写同一章节
 
@@ -68,7 +68,7 @@ GitHub Novel Serialization Skill/
 
 - **调用方式**：在**子项目根目录**（即含 `chapters/` 与 `notes-personal/` 的目录）执行，脚本路径一律用相对路径 `../GitHub Novel Serialization Skill/scripts/`（技能仓库与本子项目同级时）。**本项目文档与示例中不写绝对路径**；技能仓库若与子项目不同级，按实际相对位置调整，或用 `--root` 指定项目根。
 - **项目根识别**：脚本以**当前工作目录**为项目根（须含 `chapters/` 与 `notes-personal/`）；不在根目录执行时用 `_promote_draft.py --root <项目根>` 显式指定（`<项目根>` 用相对路径，如 `.` 或 `../-1928`）。
-- 例：`python "../GitHub Novel Serialization Skill/scripts/humanizer_check.py" notes-personal/第一卷正文草稿.md`
+- 例：`第一卷正文草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传）
 - 脚本为多子项目共用，修改脚本须在技能仓库提交；本项目只消费、不拷贝。
 
 ### 5. 文风一致性要求
@@ -91,7 +91,7 @@ GitHub Novel Serialization Skill/
    - 历史事实是否合理（不违背基本史实逻辑）
    - 人物性格是否前后一致
    - 文风是否符合项目规范
-   - **AI 痕迹**：`humanizer_check.py` 报告须为 PASS（或 WARN 项经人工确认可不改）
+   - **AI 痕迹**：`../GitHub Novel Serialization Skill/scripts/humanizer_check.py` 报告须为 PASS（或 WARN 项经人工确认可不改）
    - 情节逻辑是否自洽
 3. 审校意见以 PR Comments 形式提出
 4. 作者根据意见**回到草稿**修改、重新自审，再同步定稿后再次提交
@@ -114,7 +114,7 @@ GitHub Novel Serialization Skill/
 - **备份头标注**：保留的最新备份文件头部以 HTML 注释标注快照日期、保留依据与修改点索引（指向 `CHANGELOG.md` 对应条目）。
 - **生成新备份时**：若同单位已存在带日期戳的旧备份且内容已被新正稿覆盖，直接移除旧备份（其差异已可追溯到 `CHANGELOG.md` 或正稿历史）。
 
-> 修改记录位置：项目根 `CHANGELOG.md`（2026-09-26 治理时的原始记录《备份修改记录》已归档至 `_trash/备份修改记录.md`）
+> 修改记录位置：项目根 `CHANGELOG.md`（2026-09-26 治理时的原始记录《备份修改记录》已归档至 `备份修改记录.md`（本机目录，不入版本控制））
 
 ## 9. 文档权威层级（草稿=改动入口、定稿=已审核发布态）
 
@@ -122,9 +122,9 @@ GitHub Novel Serialization Skill/
 
 | 内容域 | 工作草稿（改动入口） | 定稿（已审核发布态／release） |
 |--------|-------------------|------------------|
-| 世界观 | `notes-personal/世界观草稿.md` | `worldbuilding/`（各体系文档） |
-| 角色 | `notes-personal/角色设定草稿.md` | `characters/`（各角色档案） |
-| 大纲 | `notes-personal/大纲草稿.md` | `worldbuilding/OUTLINE/`（分卷大纲） |
+| 世界观 | `世界观草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传） | `worldbuilding/`（各体系文档） |
+| 角色 | `角色设定草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传） | `characters/`（各角色档案） |
+| 大纲 | `大纲草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传） | `worldbuilding/OUTLINE/`（分卷大纲） |
 | 正文 | `notes-personal/第X卷正文草稿.md` | `chapters/{卷}/{幕}/第NNN章 标题.md`（单章正文，即 release 文件） |
 
 - **修改顺序（强制）**：一切改动**先改草稿，草稿审核通过后再改定稿**。禁止跳过草稿直接改定稿（§9.1 勘误例外除外）。
@@ -138,7 +138,7 @@ GitHub Novel Serialization Skill/
 2. **自审**：跑 `python "../GitHub Novel Serialization Skill/scripts/humanizer_check.py" <草稿文件>`，FAIL 必须改写、WARN 需人工确认；另扫英文残留、半角标点、繁体混入。
 3. **送审**：审核记录归档至 `.workbuddy/reports/`（类型／日期／审核对象／结论／通过项），并在 `.workbuddy/reports/README.md` 索引表追加一行。
 4. **审核通过**：结论为 PASS（或 WARN 项经人工确认可不改）方可进入下一步；未通过则在草稿上继续改，**不碰定稿**。
-5. **同步定稿**：正文用 `python "../GitHub Novel Serialization Skill/scripts/_promote_draft.py" <章号...>` 把已过审的草稿块写入 `chapters/`（自动快照到 `_trash/`、校验章标题零差异、打印字数前后对比）；设定／大纲／角色按上表映射手工同步。反向工具 `_sync_draft.py`（定稿→草稿）仅用于勘误回写，不得作为常规改动通道。
+5. **同步定稿**：正文用 `python "../GitHub Novel Serialization Skill/scripts/_promote_draft.py" <章号...>` 把已过审的草稿块写入 `chapters/`（自动快照到 `_trash/`、校验章标题零差异、打印字数前后对比）；设定／大纲／角色按上表映射手工同步。反向工具 `../GitHub Novel Serialization Skill/scripts/_sync_draft.py`（定稿→草稿）仅用于勘误回写，不得作为常规改动通道。
 6. **登记**：`CHANGELOG.md` 记一条（改了什么、审核报告路径、同步章号），`progress.md` 更新章节状态。
 
 > **例外（可直接改定稿）**：纯勘误——错别字、标点（含 GB/T 15834—2011 引号体例）、繁简残留、断行错误，且不涉及语义。此类改动可直改定稿并回写草稿，仍须在 `CHANGELOG.md` 记一行。
@@ -149,7 +149,7 @@ GitHub Novel Serialization Skill/
 - **唯一存放目录**：所有**章节正文**只存放于 `chapters/`，禁止把正文留在 `notes-personal/`、项目根或任何临时目录；写作过程中的想法、素材、设定草稿仍放 `notes-personal/`。
 - **写入通道**：`chapters/` 定稿文件（release）的内容变更，只能来自 §9.1 第 5 步的草稿同步（`python "../GitHub Novel Serialization Skill/scripts/_promote_draft.py" <章号>`）；除 §9.1 勘误例外，不得直接编辑定稿。
 - **目录层级**：`chapters/{第X卷 卷名}/{第Y幕 幕名}/`，卷名与幕名须与 `worldbuilding/OUTLINE/` 分卷大纲一致。
-- **按章单文件**：一章一个文件，命名 `第NNN章 四字标题.md`（章号三位补零，如 `第001章 滦州惊雷.md`）；幕下可保留 `_幕导语.md` 存放幕级说明。
+- **按章单文件**：一章一个文件，命名 `第NNN章 四字标题.md`（章号三位补零，如 `chapters/第一卷 备战/第一幕 皇姑屯之变/第001章 滦州惊雷.md`）；幕下可保留 `_幕导语.md` 存放幕级说明。
 - **文件头元数据**：每章文件首行标题下加一行引用块，标注「卷 / 幕 / 章号 / 状态（草稿·定稿）/ 大纲来源」，便于检索与 Issue 关联。
 - **审稿与报告文件**：审校报告、审核报告、修订执行报告一律归档至 `.workbuddy/reports/`（见 §11），**不**放 `chapters/{卷}/` 或 `worldbuilding/`，避免创作目录堆积管理类文档。
 - **备份与归档**：历史聚合稿、空文件、旧备份一律移入 `_trash/` 归档（见 §8），工作区只保留当前有效文件。
@@ -158,7 +158,7 @@ GitHub Novel Serialization Skill/
 ### 10.1 草稿区存放规则（`notes-personal/`）
 
 - **目录层级不适用于草稿**：§10 的 `chapters/{卷}/{幕}/第NNN章 标题.md` 是**正文定稿**的存放规则，草稿区**不得照搬**。草稿在 `notes-personal/` 下**平铺为单文件**，不建卷／幕／章子目录。
-- **命名**：`{对象}草稿.md`（如 `大纲草稿.md`、`世界观草稿.md`、`角色设定草稿.md`）；分卷正文聚合稿写 `{第X卷}正文草稿.md`（如 `第一卷正文草稿.md`）。
+- **命名**：`{对象}草稿.md`（如 `大纲草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传）、`世界观草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传）、`角色设定草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传））；分卷正文聚合稿写 `{第X卷}正文草稿.md`（如 `第一卷正文草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传））。
 - **文件头声明**：草稿首部须注明「性质（工作源）／定稿出处／存放规则／权威层级」，避免与定稿混淆。
 - **内容边界**：草稿只放过程稿、素材、想法与历史聚合稿；已拆分为单章的正文以 `chapters/` 为准，草稿不再并行维护（仅在需要整体通读时保留一份聚合稿）。
 - **粒度**：一卷的正文聚合稿合并为**一个文件**（不按幕拆分），避免同一卷出现多份同构文件。
@@ -190,11 +190,11 @@ GitHub Novel Serialization Skill/
 
 **工作草稿（工作源，见 §9）**
 
-- `notes-personal/世界观草稿.md`、`notes-personal/角色设定草稿.md`、`notes-personal/大纲草稿.md`、`notes-personal/第一卷正文草稿.md`（均平铺单文件，见 §10.1）
+- `世界观草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传）、`角色设定草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传）、`大纲草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传）、`第一卷正文草稿.md`（工作草稿，不随仓库上传）（工作草稿，不随仓库上传）（均平铺单文件，见 §10.1）
 
 **管理与进度**
 
-- [progress.md](progress.md) — 卷/幕/章进度与实测统计；**项目唯一的进度与规划文档**（原 `PLAN.md` 总体规划已并入其「附一：总体规划」并按实况校正，`PLAN.md` 已于 2026-09-29 删除）
+- [progress.md](progress.md) — 卷/幕/章进度与实测统计；**项目唯一的进度与规划文档**（原 `PLAN.md`（历史文件，现已不存在） 总体规划已并入其「附一：总体规划」并按实况校正，`PLAN.md`（历史文件，现已不存在） 已于 2026-09-29 删除）
 - [CHANGELOG.md](CHANGELOG.md) — 变更日志（含备份治理与报告归档记录）
 - [issues/README.md](issues/README.md) — 卷幕剧情讨论 Issue 索引（#1—#23）
 - [.workbuddy/reports/README.md](.workbuddy/reports/README.md) — 审查 / 审核报告归档索引（见 §11）
