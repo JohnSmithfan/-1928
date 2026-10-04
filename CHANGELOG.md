@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+> **发布注记**：标签 **v1.10.3** 落点为 2026-10-04 当日最后一次提交，本段 #139 至 #159 的成果（第二卷第三幕四十章定稿入仓、军事分型系列六轮、第三幕七批起草）全部在该提交及其前一提交内；段内条目尚未另立版本小节，待作者决定是否拆出 `[1.10.3]`。
+
 ### Added
 
 #### 第二卷第三幕（189—228）整幕审核与同步定稿（#159）
@@ -2958,9 +2960,9 @@ characters README（969676f）、主要角色总览（4bd873f）、张作霖（d
 
 ---
 
-> **版本标签（2026-10-03 建立，本地未推送）**：`v0.1.0`／`v1.9.0`／`v1.9.1`／`v1.9.2`／`v1.9.3`／`v1.9.4`／`v1.10.0`／`v1.10.1`／`v1.10.2`，分别指向各版本日期当日（无当日提交时取此前最近一次提交）的最后一次提交。推送需作者另行批准：`git push origin --tags`。
+> **版本标签（2026-10-04 建立，本地未推送）**：`v0.1.0`／`v1.9.0`／`v1.9.1`／`v1.9.2`／`v1.9.3`／`v1.9.4`／`v1.10.0`／`v1.10.1`／`v1.10.2`／`v1.10.3`，分别指向各版本日期当日（无当日提交时取此前最近一次提交）的最后一次提交。推送需作者另行批准：`git push origin --tags`。
 
-[unreleased]: https://github.com/JohnSmithfan/-1928/compare/v1.10.2...HEAD
+[unreleased]: https://github.com/JohnSmithfan/-1928/compare/v1.10.3...HEAD
 [0.1.0]: https://github.com/JohnSmithfan/-1928/releases/tag/v0.1.0
 [1.9.0]: https://github.com/JohnSmithfan/-1928/compare/v0.1.0...v1.9.0
 [1.9.1]: https://github.com/JohnSmithfan/-1928/compare/v1.9.0...v1.9.1
@@ -2970,5 +2972,6 @@ characters README（969676f）、主要角色总览（4bd873f）、张作霖（d
 [1.10.0]: https://github.com/JohnSmithfan/-1928/compare/v1.9.4...v1.10.0
 [1.10.1]: https://github.com/JohnSmithfan/-1928/compare/v1.10.0...v1.10.1
 [1.10.2]: https://github.com/JohnSmithfan/-1928/compare/v1.10.1...v1.10.2
+[1.10.3]: https://github.com/JohnSmithfan/-1928/compare/v1.10.2...v1.10.3
 [Keep a Changelog]: https://keepachangelog.com/en/1.1.0/
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html
