@@ -13,6 +13,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+#### 文件卫生清理：备份快照归位、回收站唯一化与打包归档（#161）
+
+> 2026-10-04，审核报告索引 **#161**，总数 160→**161**，性质＝工程治理（文件卫生），**正文与定稿零改动**。
+
+- **备份快照**：按「同基名只留最新 1 份」清理——根目录 `CHANGELOG.md.bak-*`（18 份）与 `progress.md.bak-*`（18 份）各留 `bak-2026-10-04-d1`；`notes-personal/` 31 份移走 30 份（含合并后名实不符的 `第一卷正文草稿.md.bak-b17`、`第二卷正文草稿.md.bak-2026-10-04-a3b`，回退能力由 `_trash/草稿合并前_2026-10-04/` 内的最终态原稿承担），只留 `角色设定草稿.md.bak-2026-10-04-b7`；报告区 `README.md.bak-*` 9 份移走 8 份。合计留 4 份、移 73 份。
+- **回收站唯一化**：根 `_trash/` 定为唯一回收站；`.workbuddy/_trash/`（19 个）并入 `_trash/.workbuddy迁移_2026-10-04/` 后目录撤销；`.workbuddy/tmp/`（45 个）移入 `_trash/tmp_2026-10-04/` 后目录撤销。`.workbuddy/` 只余 `memory／reports／scripts`。
+- **脚本归档**：`scripts/` 下一次按报告或批次命名的脚本（`upd_*／fix_*／retag*／commit*／append_batch*／cnt_batch*／memNNN`）归档 49 个，剩 33 个通用工具；`scripts/archive/` 570→619 个。
+- **打包归档**：`_trash/` 1156 个／112.2 MB 打包为根 `_trash_2026-10-04.zip`（**42.6 MB**），清单 `.workbuddy/_trash_2026-10-04.manifest.txt`（不入仓库）；经「条目数一致＋`testzip()` 无损坏＋逐文件 CRC 一致」三道闸校验后移除散文件。工作目录 137 MB → **65 MB**。
+- **口径**：新增 `CONTRIBUTING.md` §8.1「回收站唯一化与打包归档」，含回收站唯一、打包阈值与校验口径、快照清理口径、一次性脚本归档口径四条。
+- **门禁**：`_promote_draft.py --dry-run` 201 章无差异（27 章块尾 `---` 为既有差异 D366）；`checkrefs.py` 无新增 MISSING；报告 humanizer PASS 909 字；清理物均在 `.gitignore` 覆盖内，不进仓库。
+
 #### 正文草稿合并：两卷正文草稿并为一卷（#160）
 
 > 2026-10-04：审核报告索引 **#160**，总数 159→**160**，性质＝工程治理（草稿区文件合并，**正文与定稿均未改一字**）

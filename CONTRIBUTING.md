@@ -116,6 +116,13 @@ GitHub Novel Serialization Skill/
 
 > 修改记录位置：项目根 `CHANGELOG.md`（2026-09-26 治理时的原始记录《备份修改记录》已归档至 `备份修改记录.md`（本机目录，不入版本控制））
 
+### 8.1 回收站唯一化与打包归档（2026-10-04 立）
+
+- **回收站唯一**：项目**只有一个回收站**＝根 `_trash/`。2026-10-04 起撤销 `.workbuddy/_trash/` 与 `.workbuddy/tmp/` 两个同类目录（内容已并入 `_trash/`），`.workbuddy/` 下只留 `memory／reports／scripts` 三处。新增待弃文件一律移入 `_trash/<用途>_<日期>/`，**不得新建第二个回收站或临时区**。
+- **打包归档**：`_trash/` 体积显著时（本次阈值：>100 MB），整体打包为根 `_trash_YYYY-MM-DD.zip`，同时生成清单 `.workbuddy/_trash_YYYY-MM-DD.manifest.txt`（不入仓库），**校验通过后才移除散文件**。校验口径：zip 条目数 == 磁盘文件数，且 `testzip()` 无损坏、逐文件 CRC 一致。取回单份文件时解压取用，不必整包恢复。
+- **快照清理口径**：备份按「同一基名只留最新 1 份」清理——`CHANGELOG.md.bak-*`、`progress.md.bak-*`、`*.md.bak-*` 等同基名的快照按修改时间排序，仅留最新一份，其余移入 `_trash/备份快照_<日期>/`（保留原相对路径）。**已并入他稿、名实不符的旧名快照**（如草稿合并后的 `第一卷正文草稿.md.bak-*`／`第二卷正文草稿.md.bak-*`）一律不再保留，其回退能力由 `_trash/草稿合并前_<日期>/` 内的最终态原稿承担。
+- **一次性脚本**：`.workbuddy/scripts/` 下 `upd_*／fix_*／retag*／commit*／append_batch*／cnt_batch*／memNNN` 等按报告或批次命名的一次性脚本，任务完成后移入 `scripts/archive/`；通用工具（`audit_*／check*／normref*／sync_settings／outline_sync／create_*／cv_survey／palace*` 等）留在 `scripts/` 根目录。
+
 ## 9. 文档权威层级（草稿=改动入口、定稿=已审核发布态）
 
 为避免“草稿 ↔ 定稿”多处漂移，文档分两级管理：
