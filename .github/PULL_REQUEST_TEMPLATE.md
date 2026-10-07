@@ -24,16 +24,16 @@
 
 ## 门禁自检
 
-- [ ] `check_outline_text.py`（大纲端任何改动后必跑）
-- [ ] `check_readme.py`（报告索引有改动时必跑）
-- [ ] `check_garble.py`（无乱码）
+- [ ] `.workbuddy/scripts/check_outline_text.py`（大纲端任何改动后必跑）
+- [ ] `.workbuddy/scripts/check_readme.py`（报告索引有改动时必跑）
+- [ ] `.workbuddy/scripts/check_garble.py`（无乱码）
 - [ ] `sync_settings.py compare`（设定端↔草稿端一致）
 
 ## 已更新
 
 - [ ] `CHANGELOG.md`
 - [ ] `progress.md`（涉章次或进度时）
-- [ ] `notes-personal/裁决项台账.md`（涉 D 系列裁决项时）
+- [ ] `裁决项台账.md`（工作草稿，不随仓库上传）（涉 D 系列裁决项时）
 
 ---
 

@@ -17,7 +17,7 @@
 
 1. 是否已有人提过同类条目（查 open 与 closed 两栏）
 2. 拟提的改动是否已由某份报告处理过（查 [`.workbuddy/reports/README.md`](.workbuddy/reports/README.md)）
-3. 拟提的设定冲突是否已挂账（查 `notes-personal/裁决项台账.md` 的 D 系列编号）
+3. 拟提的设定冲突是否已挂账（查 `裁决项台账.md`（工作草稿，不随仓库上传） 的 D 系列编号）
 
 ## 必读
 

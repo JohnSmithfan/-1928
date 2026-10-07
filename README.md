@@ -59,7 +59,7 @@
 
 1. 阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解协作规范（**含 §12 文件卫生条例**）
 2. 阅读 [STYLE-GUIDE.md](./STYLE-GUIDE.md) 了解写作风格要求
-3. 在 [Issue](./.github/ISSUE_TEMPLATE) 中认领章节或提出写作建议（四类模板：章节认领／设定勘误／创作建议／文件卫生）
+3. 在 `.github/ISSUE_TEMPLATE/` 中认领章节或提出写作建议（四类模板：章节认领／设定勘误／创作建议／文件卫生）
 4. 创建分支进行写作，提交 Pull Request 请求审校（模板见 [PULL_REQUEST_TEMPLATE.md](./.github/PULL_REQUEST_TEMPLATE.md)）
 5. 审校通过后合并至主分支
 
@@ -75,7 +75,7 @@
 
 ## 文件卫生（一句话）
 
-仓库里出现**零字节文件、临时扫描产物、散落备份、根目录越界文件、脚本堆积、末尾无换行、换行符混杂、BOM、文件名异常、内容重复、`_trash/` 堆积**——任一项——都走同一条路：**出报告 → 确认 → 按报告改 → 复扫登记**。判定清单与五步流程见 [CONTRIBUTING.md §12](./CONTRIBUTING.md)，自查工具 `python .workbuddy/scripts/scan_hygiene.py`。
+仓库里出现**零字节文件、临时扫描产物、散落备份、根目录越界文件、脚本堆积、末尾无换行、换行符混杂、BOM、文件名异常、内容重复、`_trash/` 堆积**——任一项——都走同一条路：**出报告 → 确认 → 按报告改 → 复扫登记**。判定清单与五步流程见 [CONTRIBUTING.md §12](./CONTRIBUTING.md)，自查工具 python `.workbuddy/scripts/scan_hygiene.py`。
 
 ## 版权声明
 
