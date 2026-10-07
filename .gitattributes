@@ -1,0 +1,30 @@
+# ============================================
+# 奉天1928 - 换行符与文本属性（#220 立）
+# ============================================
+# 经 2026-10-07 文件卫生整理，全库 .md／.py 统一为 LF。
+# 本文件用于锁死该口径，避免 core.autocrlf=true 在 checkout 时把 LF 拉回 CRLF。
+
+# --- 默认：文本一律 LF ---
+* text=auto eol=lf
+
+# --- 明确声明为二进制，禁止任何转换 ---
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+
+# --- 明确声明为文本，一律 LF ---
+*.md   text eol=lf
+*.py   text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# --- 无扩展名文件（LICENSE 等）按 LF 处理 ---
+LICENSE      text eol=lf
+.gitignore   text eol=lf
+.gitattributes text eol=lf

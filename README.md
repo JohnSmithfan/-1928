@@ -34,26 +34,48 @@
 奉天1928/
 ├── README.md              ← 项目介绍与参与方式
 ├── SYNOPSIS.md            ← 剧情总纲
-├── LICENSE                ← CC BY-NC-SA 4.0 协议
-├── CONTRIBUTING.md        ← 写作协作规范
-├── CODE_OF_CONDUCT.md     ← 行为准则
-├── .gitignore             ← Git忽略规则
 ├── STYLE-GUIDE.md         ← 写作风格
 ├── progress.md            ← 进度与规划（唯一；含「附一：总体规划」，原 PLAN.md 已并入并删除）
+├── CHANGELOG.md           ← 变更日志
+├── LICENSE                ← CC BY-NC-SA 4.0 协议
+├── CONTRIBUTING.md        ← 写作协作规范 ＋ §12 文件卫生条例
+├── CODE_OF_CONDUCT.md     ← 行为准则（注意是空格，非下划线）
+├── SECURITY.md            ← 安全政策（凭据泄漏的上报渠道）
+├── SUPPORT.md             ← 支持渠道与提问前自查
+├── .gitignore             ← Git忽略规则
+├── .gitattributes         ← 换行符口径（全库 LF）
+├── .github/               ← Issue / PR 模板、CODEOWNERS
 ├── chapters/              ← 正文唯一存放目录（卷/幕/单章：`第NNN章 四字标题.md`）
 ├── characters/            ← 角色设定
 ├── worldbuilding/         ← 世界观设定（含 OUTLINE/ 五卷大纲，分卷权威源）
 ├── issues/                ← 卷/幕剧情讨论 Issue（每幕一个，附索引）
 ├── notes-personal/        ← 个人工作草稿（大纲拼接副本/设定草稿，非权威源）
+└── _trash/                ← 唯一回收站（按用途+日期分子目录，附 MANIFEST.md）
 ```
+
+> ⚠️ 根目录只许存在上面这些条目，多一个都判违规 —— 见 [CONTRIBUTING.md §12](./CONTRIBUTING.md) 文件卫生条例。
 
 ## 参与方式
 
-1. 阅读 CONTRIBUTING.md 了解协作规范
-2. 阅读 STYLE-GUIDE.md 了解写作风格要求
-3. 在 Issue 中认领章节或提出写作建议
-4. 创建分支进行写作，提交 Pull Request 请求审校
+1. 阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解协作规范（**含 §12 文件卫生条例**）
+2. 阅读 [STYLE-GUIDE.md](./STYLE-GUIDE.md) 了解写作风格要求
+3. 在 [Issue](./.github/ISSUE_TEMPLATE) 中认领章节或提出写作建议（四类模板：章节认领／设定勘误／创作建议／文件卫生）
+4. 创建分支进行写作，提交 Pull Request 请求审校（模板见 [PULL_REQUEST_TEMPLATE.md](./.github/PULL_REQUEST_TEMPLATE.md)）
 5. 审校通过后合并至主分支
+
+### 提 Issue 前先看这里
+
+| 你要做的事 | 用哪个模板 |
+|---|---|
+| 认领某一章 | [章节认领](./.github/ISSUE_TEMPLATE/章节认领.md) |
+| 报告史实／设定／数字错误 | [设定勘误](./.github/ISSUE_TEMPLATE/设定勘误.md) |
+| 提议情节／角色／支线 | [创作建议](./.github/ISSUE_TEMPLATE/创作建议.md) |
+| 发现垃圾文件或格式污染 | [文件卫生](./.github/ISSUE_TEMPLATE/文件卫生.md) |
+| 疑似凭据泄漏 | [SECURITY.md](./SECURITY.md)，**勿开公开 Issue** |
+
+## 文件卫生（一句话）
+
+仓库里出现**零字节文件、临时扫描产物、散落备份、根目录越界文件、脚本堆积、末尾无换行、换行符混杂、BOM、文件名异常、内容重复、`_trash/` 堆积**——任一项——都走同一条路：**出报告 → 确认 → 按报告改 → 复扫登记**。判定清单与五步流程见 [CONTRIBUTING.md §12](./CONTRIBUTING.md)，自查工具 `python .workbuddy/scripts/scan_hygiene.py`。
 
 ## 版权声明
 

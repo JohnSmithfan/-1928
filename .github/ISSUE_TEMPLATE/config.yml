@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 写作协作规范与文件卫生条例
+    url: https://github.com/OWNER/REPO/blob/main/CONTRIBUTING.md
+    about: 认领流程、命名体例、权威层级、§12 文件卫生条例（垃圾与污染的判定清单与报告流程）均在此。提问前请先读。
+  - name: ✍️ 文风与体例指南
+    url: https://github.com/OWNER/REPO/blob/main/STYLE-GUIDE.md
+    about: 标点（GB/T 15834—2011）、字数、命名、引号体例等写作格式要求。
+  - name: 🗺️ 剧情总纲
+    url: https://github.com/OWNER/REPO/blob/main/SYNOPSIS.md
+    about: 五卷结构与时间跨度的总纲，写前列提纲必读。
+  - name: 📊 进度与 knockdown 文档
+    url: https://github.com/OWNER/REPO/blob/main/progress.md
+    about: 卷／幕／章进度、实测统计与总体规划（项目唯一的进度文档）。

@@ -1,0 +1,32 @@
+# CODEOWNERS
+# 语法：<路径> <@用户名 或 邮箱>
+#
+# 作用：命中路径的 PR 会自动请求下列 owner 评审。
+# 配置：把下面的占位符替换为实际 GitHub 用户名后生效；未替换前 GitHub 会忽略含无效 owner 的行。
+
+# --- 默认 owner：全部内容 ---
+# *                @OWNER
+
+# --- 正文与大纲：改之前须走 §9.1 审核流程 ---
+# /chapters/       @OWNER @EDITOR
+# /worldbuilding/  @OWNER @EDITOR
+# /characters/     @OWNER @EDITOR
+
+# --- 设定硬口径与台账：改动影响面最大，须双人确认 ---
+# /worldbuilding/经济体系.md      @OWNER @EDITOR
+# /worldbuilding/军事体系.md      @OWNER @EDITOR
+# /notes-personal/裁决项台账.md   @OWNER
+
+# --- 工程配置与文件卫生相关 ---
+# /.github/        @OWNER
+# /.gitignore      @OWNER
+# /.gitattributes  @OWNER
+# /CONTRIBUTING.md @OWNER
+# /SECURITY.md     @OWNER
+
+# --- 报告索引：任何报告增删都影响追溯链 ---
+# /.workbuddy/reports/README.md  @OWNER
+
+# --- 绝不应被 PR 触碰的工作区（白名单内除外）：见 CONTRIBUTING.md §12 G4 ---
+# /_trash/         @OWNER
+# /notes-personal/ @OWNER
