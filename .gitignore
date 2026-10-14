@@ -11,6 +11,7 @@
 *.tmp
 *.swx
 *.log
+*.writing
 
 # --- Vim 交换文件 ---
 .*.swp
