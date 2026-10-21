@@ -9,9 +9,9 @@
 
 ## 是否走了 §9.1 流程
 
-- [ ] 改动已先落于 `notes-personal/` 对应草稿
+- [ ] 改动已先落于 `本机工作草稿区` 对应草稿
 - [ ] 已跑 humanizer 自审（结果：PASS ／ WARN 已人工确认）
-- [ ] 审核报告已归档至 `.workbuddy/reports/` 并登记索引
+- [ ] 审校已出结论并登记索引（归档在本机工作区，不随仓库发布）
 - [ ] 涉及正文的改动已用 promote 通道同步，或直接改定稿属 §9.1 勘误例外（纯错字／标点／断行，不涉及语义）
 
 ## 审校关注点
@@ -24,10 +24,12 @@
 
 ## 门禁自检
 
-- [ ] `.workbuddy/scripts/check_outline_text.py`（大纲端任何改动后必跑）
-- [ ] `.workbuddy/scripts/check_readme.py`（报告索引有改动时必跑）
-- [ ] `.workbuddy/scripts/check_garble.py`（无乱码）
+- [ ] `check_outline_text.py`（大纲端任何改动后必跑）
+- [ ] `check_readme.py`（报告索引有改动时必跑）
+- [ ] `check_garble.py`（无乱码）
 - [ ] `sync_settings.py compare`（设定端↔草稿端一致）
+- [ ] `check_release_refs.py`（release 文件引用自检：不得引用非 release 文件，GitHub 须自洽；A 越界／B 断链／C 出仓／E 仓外 任一 FAIL 不得合并）
+- [ ] `check_literariness.py`（文学性七项 L1—L7；涉正文必跑。**P0 三项零容忍**：L2 章末回述段／L4 对话占比 <4%／L6 人性标记 0 处，任一 FAIL 不得合并；新写章同，存量整改批按批验收。判据见 `STYLE-GUIDE.md` §十五）
 
 ## 已更新
 
